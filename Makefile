@@ -1,39 +1,64 @@
-SRC_SERVER	= server.c server_struct.c \
-			  server_string.c server_error.c
+NAME = minitalk
+SERVER = server
+CLIENT = client
+LIBFT = libft.a
 
-SRC_CLIENT	= client.c client_bits.c \
-			  client_end.c
+OBJ_DIR = obj
+LIBFT_DIR = ./libft
+OBJ_DIR_S = obj/server/
+OBJ_DIR_C = obj/client/
+SRC_DIR_S = src/server/
+SRC_DIR_C = src/client/
+HEADERS_C = includes/client_minitalk.h
+HEADERS_S = includes/server_minitalk.h
+
+CC = clang
+CFLAGS = -Wall -Werror -Wextra -g
+RM = rm -rf
+
+LFLAGS = -lft
+IFLAGS = -Iincludes
+
+OBJ_SERVER	= $(OBJ_DIR_S)server.o $(OBJ_DIR_S)server_struct.o \
+			  $(OBJ_DIR_S)server_string.o $(OBJ_DIR_S)server_error.o
+
+OBJ_CLIENT	= $(OBJ_DIR_C)client.o $(OBJ_DIR_C)client_bits.o \
+			  $(OBJ_DIR_C)client_end.o
 
 
-all:	libft.a obj_dir server client
+all:	$(NAME)
 
-libft.a:
-	@make -C ./libft
+$(NAME): $(LIBFT) $(OBJ_DIR) $(SERVER) $(CLIENT)
 
-server: obj/server/server.o obj/server/server_struct.o obj/server/server_string.o obj/server/server_error.o
-		clang -Wall -Werror -Wextra obj/server/server.o obj/server/server_struct.o obj/server/server_string.o obj/server/server_error.o -L./libft -lft -o $@
+bonus: all
 
-client: obj/client/client.o obj/client/client_bits.o obj/client/client_end.o
-		clang -Wall -Werror -Wextra -g obj/client/client.o obj/client/client_bits.o obj/client/client_end.o -L./libft -lft -o $@
+$(LIBFT):
+	@make -C $(LIBFT_DIR)
 
-obj_dir:
-	@mkdir -p obj
-	@mkdir -p obj/server
-	@mkdir -p obj/client
+$(SERVER): $(OBJ_SERVER)
+		$(CC) $(FLAGS) $(OBJ_SERVER) -L$(LIBFT_DIR) $(LFLAGS) -o $@
 
-./obj/client/%.o : ./src/client/%.c
-	clang -Wall -Werror -Wextra  -g $< -c -I includes -o $@
+$(CLIENT): $(OBJ_CLIENT)
+		$(CC) $(FLAGS) $(OBJ_CLIENT) -L$(LIBFT_DIR) $(LFLAGS) -o $@
 
-./obj/server/%.o : ./src/server/%.c
-	clang -Wall -Werror -Wextra  $< -c -I includes -o $@
+$(OBJ_DIR):
+	@mkdir -p $(OBJ_DIR)
+	@mkdir -p $(OBJ_DIR_S)
+	@mkdir -p $(OBJ_DIR_C)
+
+$(OBJ_DIR_C)%.o : $(SRC_DIR_C)%.c $(HEADERS_S)
+	$(CC) $(FLAGS) $< -c $(IFLAGS) -o $@
+
+$(OBJ_DIR_S)%.o : $(SRC_DIR_S)%.c $(HEADERS_S)
+	$(CC) $(FLAGS) $< -c $(IFLAGS) -o $@
 
 clean:	
-	@make clean -C libft
-	@rm -rf ./obj
+	@make clean -C $(LIBFT_DIR)
+	$(RM) $(OBJ_DIR)
 
 fclean:		clean
-	@make fclean -C libft
-	@rm -f server client
+	@make fclean -C $(LIBFT_DIR)
+	$(RM) $(SERVER) $(CLIENT)
 
 re:			fclean all
 

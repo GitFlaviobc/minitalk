@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbonini <fbonini@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fbonini- <fbonini-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 16:20:01 by fbonini           #+#    #+#             */
-/*   Updated: 2021/06/01 11:15:49 by fbonini          ###   ########.fr       */
+/*   Updated: 2021/10/06 16:37:25 by fbonini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int		ft_isalpha(int c);
 
 int		ft_isdigit(int c);
 
-int		ft_isalnum (int c);
+int		ft_isalnum(int c);
 
 int		ft_isascii(int c);
 

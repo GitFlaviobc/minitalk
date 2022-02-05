@@ -6,11 +6,11 @@
 /*   By: fbonini- <fbonini-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 14:53:07 by fbonini-          #+#    #+#             */
-/*   Updated: 2021/10/05 15:40:24 by fbonini-         ###   ########.fr       */
+/*   Updated: 2021/10/06 16:14:53 by fbonini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/server_minitalk.h"
+#include "server_minitalk.h"
 
 void	ft_check_status(t_server *server)
 {

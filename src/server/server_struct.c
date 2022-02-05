@@ -6,11 +6,11 @@
 /*   By: fbonini- <fbonini-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 10:48:55 by fbonini-          #+#    #+#             */
-/*   Updated: 2021/10/05 14:07:15 by fbonini-         ###   ########.fr       */
+/*   Updated: 2021/10/06 15:10:06 by fbonini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/server_minitalk.h"
+#include "server_minitalk.h"
 
 void	ft_struct_server(t_server *server, int pid)
 {

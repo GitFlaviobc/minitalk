@@ -6,11 +6,11 @@
 /*   By: fbonini- <fbonini-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 10:40:08 by fbonini-          #+#    #+#             */
-/*   Updated: 2021/10/05 13:36:53 by fbonini-         ###   ########.fr       */
+/*   Updated: 2021/10/06 15:10:01 by fbonini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/server_minitalk.h"
+#include "server_minitalk.h"
 
 char	*ft_strjoin_first(char c)
 {
