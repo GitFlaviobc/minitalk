@@ -40,7 +40,7 @@
 
 <a name="function"/> <h2> 📚 Functionality </h2> </a>
 
-⚠️
+⚠️🚧
 
 <p></p>
 <a href = "#content">📋</a>
