@@ -79,7 +79,6 @@ make re
 ```bash
 ./client "SERVER PID" message
 ```
-###### Without the " "
 <p></p>
 <a href = "#content">📋</a>
 
