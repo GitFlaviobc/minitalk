@@ -84,7 +84,7 @@ make re
 
 <a name="test"/> <h2> 👨‍💻 Tests </h2> </a>
 - This can generate random texts: [Text](http://www.dummytextgenerator.com/#jump)
-- This can generate random texts: [Unicode](https://texteditor.com/)
+- This can generate Unicode messages: [Unicode](https://texteditor.com/)
 - ⚠️For multiple strings don't forget to put between quotes.
 <p></p>
 <a href = "#content">📋</a>
