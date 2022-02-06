@@ -40,7 +40,7 @@
 
 <a name="function"/> <h2> 📚 Functionality </h2> </a>
 
-⚠️🚧
+![MiniTalk Gif](https://github.com/GitFlaviobc/minitalk/blob/master/Images/Minitalk.gif)
 
 <p></p>
 <a href = "#content">📋</a>
@@ -51,7 +51,7 @@
 ```bash
 git clone https://github.com/GitFlaviobc/minitalk.git
 ```
-- to create the client and server
+- to create the client and server (Inside the Project folder)
 ```bash
 make
 ```
